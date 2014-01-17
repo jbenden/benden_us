@@ -25,18 +25,18 @@
   white-space: nowrap;
   overflow: hidden;
 
-  background-image: url('../images/phoenix.png');
-  background-repeat: no-repeat;
-  background-position: center bottom;
+  // background-image: url('../images/phoenix.png');
+  //background-repeat: no-repeat;
+  //background-position: center bottom;
   z-index: 5;
 }
 .site-logo.sans-star {
-  background-image: url('../images/phoenix-sans-star.png');
+  // background-image: url('../images/phoenix-sans-star.png');
 }
 .site-logotype {
   color: #161B21;
   font-family: $font-family-logotype;
-  letter-spacing: -1rem;
+  // letter-spacing: -1rem;
   text: {
     align: center;
     decoration: none;

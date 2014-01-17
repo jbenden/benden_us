@@ -8,7 +8,7 @@ Dotenv.load
 # Blog settings
 ###
 
-Time.zone = 'America/Los_Angeles'
+Time.zone = 'America/Phoenix'
 
 activate :blog do |blog|
   blog.default_extension = '.markdown'

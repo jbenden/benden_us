@@ -1,0 +1,180 @@
+---
+category: prose
+layout: prose
+series: Benden.us
+title: "TDM over Ethernet: Improved Multi-frame format..."
+date: 2008-03-31 21:25
+comments: false
+---
+
+*Abstract*: This article describes a process whereby multiple TDM
+spans may be coalesced in to a single frame that is sent and received
+on the physical network layer. This new process was designed to
+increase the efficiency of TDMoE allowing for high-density telephony
+applications. This article describes said usage with the Asterisk PBX
+Ztdynamic driver for Ethernet; however, the protocol is applicable to
+other physical layers.
+
+Funding for this project was provided for by <a href="http://www.red-fone.com/"
+                target="_blank" title="Redfone Communications
+                LLC">Redfone Communications LLC</a>.
+
+## Overview
+
+The Zapata Telephony Project brought the concept of bringing
+legacy TDM interfaces in to software telephony projects, such
+as Asterisk PBX.  The Zapata Telephony Project created a set
+of drivers called Zaptel.  TDM interfaces (such as a T1 or E1)
+use Zaptel drivers, to break up their serial stream in to
+chunks (frames) that represent channels.  These channels are
+in turn brought in to Asterisk PBX for the telephony operators
+usage.
+
+The Ztdynamic driver acts as a proxy and abstracts the
+interaction between the Zaptel driver and a physical layer
+driver, to relay voice & signaling information between
+them. Ztdynamic takes some non-serial, non-TDM interface, such
+as Ethernet (using the ztd-eth driver), and makes it
+*look* like TDM, so Zaptel can process it.
+
+## The Present: Single Span Operation
+
+When ztdynamic proxies a request to or from ztd-eth, ztd-eth
+performs a lookup to find the dynamic span associated with the
+frame, encapsulates the frame with an Ethernet header, and
+then sends the raw Ethernet frame. This occurs at a frequency
+of 1,000 frames per second, due to the underlying nature of
+Zaptel using a fixed 1ms sampling rate. Additionally, each
+frame may correspond to a single CPU interrupt.
+
+If you had four spans configured, you would have 4,000
+frames per second on the Ethernet and
+the possibility of 4,000 interrupts per second
+to the CPU. This severely limits the usefulness
+of the protocol in high-density applications. This is because a
+high-density of TDMoE would eventually saturate the system
+CPU via network interrupts.
+
+Below is an image of a T1 single span Ethernet frame. The frame is
+226 bytes in total length, 14 bytes are the Ethernet header, 2
+bytes are the ztd-eth sub-address header, and 210 bytes are
+the payload/TDM data.
+
+<img
+src="http://www.thrallingpenguin.com/articles/TDMoE.png"
+width="781"
+height="177"
+border="0"
+alt="TDMoE
+Single Span
+Frame"
+style="border:
+0px;" />
+
+After the 14 byte Ethernet header is removed, the first two bytes are
+the ztd-eth sub-address header. This is used to determine the span
+number when multiple spans are used for a unique MAC address. The next byte
+contains the number of samples per channel contained in the data portion of
+the frame. The next byte contains the flags for the channels. The next two
+bytes are the transmit counter sequence, used to detect missing or duplicate
+frames. The next two bytes are the number of channels in the data portion of
+the frame. And the next two bytes are the signal bits. The rest is the data
+portion, which consists of the samples for each of the number of channels
+contained in the frame.
+
+## Multi-Span Frame Operation
+
+In TDMoE Multi-Span operation, one 1 ms frame for each
+sub-address destine to the same MAC address, is combined in to one
+Ethernet frame, instead of each sub-address having it's own Ethernet
+frame.
+
+Multi-Span operation would change the purpose of the ztd-eth
+sub-address field. Bit 15 would be set to signify Multi-Span operation
+and bits 0 through 7 would signify the number of concatenated spans
+present in the frame. This is used to simplify and verify the driver
+level read operations. The rest of the frame would be a literal
+concatenation of the spans.
+
+With the Multi-Span operation, a quad T1 would be represented by a
+frame whose total length is 856 bytes. 14 bytes are the Ethernet frame
+header, 2 bytes are the multi-span header, 210 bytes are the first
+span, 210 bytes are the second span, 210 bytes are the third span, and
+210 bytes are the fourth span.
+
+A standard Ethernet frame has a maximum size of 1500 bytes. Therefore
+7 T1 spans are about the maximum that may be combined to form a single
+TDMoE Multi-Span frame. E1 spans require more payload and are thus
+more restrictive on the maximum number of spans. To be on the safe
+side, 4 spans per Multi-Span frame would be best. If Gigabit Ethernet
+were utilized, jumbo frames may alleviate this matter.
+
+As an example, one should be able to have a total of 16 T1 or E1 spans
+at the same number of frames and interrupts as a quad single-span
+frame equivalent, when 4 spans are combined per Multi-Span frame.
+
+## Results
+
+In a test environment using CentOS 4, 7 T1 PRI spans were
+combined, giving a total frame size
+of 1488 bytes.  Zttest results were very good -
+showing a steady 100% timer effectiveness.
+The total system interrupts were around 2500
+per second.
+
+## Source Code
+
+The new Ztdynamic driver is available. It builds with the latest
+Zaptel for Asterisk PBX version 1.4 and is also known
+to build with SVN Zaptel.  For
+configuration, it works the same as ztd-eth,
+except you must specify eth-mf as the driver
+inside /etc/zaptel.conf
+
+Here are two example configuration
+files that are in use:
+
+* <a href="1st-zaptel.conf">1st-zaptel.conf</a>
+* <a href="2nd-zaptel.conf">2nd-zaptel.conf</a>
+
+A driver for Solaris will be available soon.
+
+### Update on code status
+
+The TDMoE-MF driver is now included in the DAHDI distribution
+from Asterisk.org. Additionally, a beta Solaris driver is available
+from SolarisVoip.com.
+
+## Conclusion
+
+By utilizing the TDMoE Multi-Span protocol, a telephony operator may
+easily extend their existing TDMoE environment by a factor equal to
+the number of spans combined in to a Multi-Span frame.
+
+A telephony operator which does not have an existing TDMoE environment
+may use this new method as an easy way to extend the available TDM
+ports available to any single Asterisk PBX system.
+
+On a closing note, a very large scale telephony operator may use this
+new protocol as a means to remove hardware restrictions from their
+primary equipment and thereby push the hardware restrictions onto
+embedded systems or devices such as those sold by Redfone
+Communications. In doing so, much of the burden of interrupt handling
+and additional hardware processing is pushed away from the primary
+equipment. An additional benefit of redundancy is achieved by
+utilizing multiple embedded systems with multiple network interface
+cards - allowing each piece of the equation to perform the task it is
+best at performing, yet allowing each piece to be tuned to the task at
+hand.
+
+## References
+
+<p>Solaris VoIP<br />
+  <a href="http://www.solarisvoip.com/" title="Solaris
+  VoIP">http://www.solarisvoip.com/</a></p>
+  <p>Redfone Communications LLC<br /> <a
+  href="http://www.red-fone.com/">http://www.red-fone.com/</a>
+  </p>
+  <p>Asterisk PBX<br />
+  <a href="http://www.asterisk.org/">http://www.asterisk.org/</a>
+  </p>

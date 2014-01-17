@@ -1,0 +1,71 @@
+---
+category: prose
+layout: prose
+series: Benden.us
+title: "Penguins!"
+date: 2008-09-28 18:20
+comments: false
+---
+
+<center>
+<ul id="myGallery">
+  <li><img
+  src="http://benden.us/photos/picKLE-cache/Penguins-at-Newport-Aug-2008/IMG_0311_640.JPG"
+  alt="Chasing plastic..." /></li>
+  <li><img
+  src="http://benden.us/photos/picKLE-cache/Penguins-at-Newport-Aug-2008/IMG_0312_640.JPG"
+  alt="Looking pretty..." /></li>
+  <li><img
+  src="http://benden.us/photos/picKLE-cache/Penguins-at-Newport-Aug-2008/IMG_0314_640.JPG"
+  alt="Looking pretty..." /></li>
+
+  <li><img
+  src="http://benden.us/photos/picKLE-cache/Penguins-at-Newport-Aug-2008/IMG_0315_640.JPG"
+  alt="Looking pretty..." /></li>
+  <li><img
+  src="http://benden.us/photos/picKLE-cache/Penguins-at-Newport-Aug-2008/IMG_0316_640.JPG"
+  alt="Looking pretty..." /></li>
+  <li><img
+  src="http://benden.us/photos/picKLE-cache/Penguins-at-Newport-Aug-2008/IMG_0317_640.JPG"
+  alt="Looking pretty..." /></li>
+  <li><img
+  src="http://benden.us/photos/picKLE-cache/Penguins-at-Newport-Aug-2008/IMG_0318_640.JPG"
+  alt="Looking pretty..." /></li>
+  <li><img
+  src="http://benden.us/photos/picKLE-cache/Penguins-at-Newport-Aug-2008/IMG_0320_640.JPG"
+  alt="Looking pretty..." /></li>
+  <li><img
+  src="http://benden.us/photos/picKLE-cache/Penguins-at-Newport-Aug-2008/IMG_0321_640.JPG"
+  alt="Looking pretty..." /></li>
+  <li><img
+  src="http://benden.us/photos/picKLE-cache/Penguins-at-Newport-Aug-2008/IMG_0322_640.JPG"
+  alt="Looking pretty..." /></li>
+  <li><img
+  src="http://benden.us/photos/picKLE-cache/Penguins-at-Newport-Aug-2008/IMG_0323_640.JPG"
+  alt="Looking pretty..." /></li>
+  <li><img
+  src="http://benden.us/photos/picKLE-cache/Penguins-at-Newport-Aug-2008/IMG_0324_640.JPG"
+  alt="Looking pretty..." /></li>
+  <li><img
+  src="http://benden.us/photos/picKLE-cache/Penguins-at-Newport-Aug-2008/IMG_0325_640.JPG"
+  alt="Looking pretty..." /></li>
+  <li><img
+  src="http://benden.us/photos/picKLE-cache/Penguins-at-Newport-Aug-2008/IMG_0326_640.JPG"
+  alt="Looking pretty..." /></li>
+  <li><img
+  src="http://benden.us/photos/picKLE-cache/Penguins-at-Newport-Aug-2008/IMG_0327_640.JPG"
+  alt="Looking pretty..." /></li>
+  <li><img
+  src="http://benden.us/photos/picKLE-cache/Penguins-at-Newport-Aug-2008/IMG_0328_640.JPG"
+  alt="Looking pretty..." /></li>
+  <li><img
+  src="http://benden.us/photos/picKLE-cache/Penguins-at-Newport-Aug-2008/IMG_0329_640.JPG"
+  alt="Looking pretty..." /></li>
+  <li><img
+  src="http://benden.us/photos/picKLE-cache/Penguins-at-Newport-Aug-2008/IMG_0330_640.JPG"
+  alt="Looking pretty..." /></li>
+
+</ul>
+</center>
+
+Penguin friends at the Newport Aquarium in Newport, Kentucky.

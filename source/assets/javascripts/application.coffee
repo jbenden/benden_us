@@ -48,3 +48,4 @@ $(document).ready ->
 $(document).ready ->
   $('.header > .site-logotype').fitText 1.2
   $('.scroll-target').smoothScroll()
+  $('#myGallery').galleryView({autoplay:true, show_captions: true})
