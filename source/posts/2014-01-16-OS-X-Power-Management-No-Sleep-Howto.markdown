@@ -102,4 +102,10 @@ Information about calling native C/Objective-C functions from Python
 are explained
 [on StackOverflow.com](http://stackoverflow.com/questions/1490039/calling-objective-c-functions-from-python).
 
+Node.js
+-------
+
+Update for Aug 17, 2014: I have created a Node.js module to control
+power management on OS X. The project is located on [GitHub.com](https://github.com/jbenden/node-pmset).
+
 [1]: [What is the correct way to prevent sleep on OS X](http://stackoverflow.com/questions/8460033/what-is-the-correct-way-to-prevent-sleep-on-os-x)
