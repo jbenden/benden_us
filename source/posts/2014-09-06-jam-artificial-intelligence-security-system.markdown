@@ -3,7 +3,7 @@ category: prose
 layout: prose
 series: Benden.us
 title: "jam: An Artificial Intelligence Security System"
-date: 2014-09-01 09:00
+date: 2014-09-06 09:10
 comments: false
 ---
 
