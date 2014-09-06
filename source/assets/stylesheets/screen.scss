@@ -2,3 +2,8 @@
 @import "partials";
 @import "sections";
 @import "responsive";
+
+div#layout {
+    width: 80% !important;
+    margin: auto auto;
+}
