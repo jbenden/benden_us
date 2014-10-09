@@ -67,6 +67,33 @@ This enables home folder encryption using the AES-256 standard encryption
 protocol. While not completely safe, some encryption is better than
 none. In an ideal world, Apple would allow the bits of encryption used.
 
+Email
+-----
+
+Understanding and using PGP encryption is critical. To make your life
+easier on OS X, the [GPGMail](https://gpgtools.org) suite of software
+exists. Download the latest version applicable for your operating
+system. Once installed, launch the *GPG Keychain Access* tool and
+either import your existing PGP key or create a new one of at least
+4096 bits in key length.
+
+**NOTE**: To assist others in sending you email, it is best to upload
+  your public key to what is known as a key server. This is done by
+  right-clicking your own key inside of *GPG Keychain Access* and
+  selecting *Send public key to keyserver*. Other users may then
+  retrieve your public key by querying the public key servers.
+
+Screensaver
+-----------
+
+It is critical that the screensaver automatically start after 1 minute
+of inactivity. It is also recommended that a "hot-corner" be utilized
+to quickly enable the screensaver when walking away from your system.
+To enable the screensaver after one minute of inactivity, run the
+following command from *Terminal*.
+
+    $ defaults write com.apple.screensaver idleTime 1
+
 Software
 --------
 
