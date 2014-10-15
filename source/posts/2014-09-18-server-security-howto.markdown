@@ -91,6 +91,37 @@ Be sure to create each user as a unique ID number and a unique group
 ID number. This helps to secure each user from one another. Use shared
 groups where appropriately needed.
 
+HTTPS Thoughts
+--------------
+
+If you are offering HTTPS protocol, be aware of a number of
+vulnerabilities present in the protocol. The most recent vulnerability
+is the
+[POODLE exploit in SSL version 3.0](http://googleonlinesecurity.blogspot.com/2014/10/this-poodle-bites-exploiting-ssl-30.html).
+The safest thing to do is to disable both version 2.0 and 3.0 of SSL
+and offer a safe list of OpenSSL ciphers. The currently recommended
+list of ciphers is:
+
+    "ALL:!aNULL:!ADH:!eNULL:!LOW:!EXP:RC4+RSA:+HIGH:+MEDIUM"
+
+As an example, here is a sample LigHTTPd configuration for secure
+HTTPS serving:
+
+    $SERVER["socket"] == ":443" {
+      ssl.engine = "enable"
+      ssl.pemfile = "/etc/ssl/secure.pem"
+      ssl.ca-file = "/etc/ssl/gd_bundle.crt"
+      ssl.use-sslv2 = "disable"
+      ssl.use-sslv3 = "disable"
+      ssl.cipher-list = "ALL:!aNULL:!ADH:!eNULL:!LOW:!EXP:RC4+RSA:+HIGH:+MEDIUM"
+      server.document-root = server_root + "/https-docs"
+      accesslog.filename = log_root + "/https-access_log"
+    }
+
+While this is not the best possible configuration for LigHTTPd, it is
+an acceptable configuration for the widest support of browsers and
+other command-line web browsing tools.
+
 Final Thoughts
 --------------
 
