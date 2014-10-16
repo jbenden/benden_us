@@ -7,14 +7,18 @@ date: 2014-09-06 09:10
 comments: false
 ---
 
-Working closely with the [NSA](http://nsa.gov), I have developed the first ever AI
-autonomous security testing device. The system called **_Jam_**, is able to
-automatically and systematically deduce what remote vulnerabilities
-are possible.
+Jam: An Artifical Intelligence Security System
+==============================================
 
-Sounds scary, no? It might be. However, ask yourself this question:
-Who would you rather have such technology? I personally think that it
-is in the best hands possible and you should think along those same
-lines; however, I'm welcome to your opinion.
+Working by myself, I have developed the first ever artificial intelligence
+autonomous security testing tool that is capable of automatically and
+systematically deducing what remote vulnerabilities are possible and
+in certain circumstances automatically exploiting those vulnerabilities.
+It is the ultimate security testing tool as it has the expert system and
+everything necessary to wreak havoc.
 
-For those technically inclined, the system is built upon C++ and Prolog.
+Sounds scary, no? It might be - and it is for sale to the highest
+bidder. So where are you (NSA)[http://nsa.gov] or (BND)[http://www.bnd.bund.de/EN/_Home/Service_Box/Contact/Contact_node.html]?
+Contact me [here](mailto:joe@thrallingpenguin.com).
+
+For those technically inclined, the system is built upon C++ and SWI-Prolog.
