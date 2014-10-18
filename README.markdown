@@ -1,4 +1,4 @@
-# Benden.us [![Build Status](https://travis-ci.org/jbenden/benden_us.png?branch=master)](https://travis-ci.org/jbenden/benden_us)
+# Benden.us [![Dependency Status](https://gemnasium.com/jbenden/benden_us.png)](https://gemnasium.com/jbenden/benden_us)
 
 This be something. Something alright.
 
