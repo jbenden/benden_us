@@ -1,9 +1,9 @@
 # If you have OpenSSL installed, we recommend updating
 # the following line to use 'https'
 source 'http://rubygems.org'
-ruby '2.0.0'
+ruby '2.1.2'
 
-gem 'middleman', '~> 3.2.1'
+gem 'middleman', '~> 3.3.6'
 
 # Middleman's blog functionality
 gem 'middleman-blog'
@@ -12,10 +12,10 @@ gem 'nokogiri'
 gem 'sanitize'
 
 # Live-reloading plugin
-gem 'middleman-livereload', '~> 3.1.0'
+gem 'middleman-livereload', '~> 3.3.4'
 
 # Autoprefixer plugin
-gem 'middleman-autoprefixer', '~> 0.2.3'
+gem 'middleman-autoprefixer', '~> 2.2.2'
 
 # HTML minification
 gem 'middleman-minify-html'
@@ -33,7 +33,6 @@ end
 
 # Deployment-related plugins
 gem 'dotenv'
-gem 'newrelic_rpm'
 gem 'rack-contrib'
 gem 'rack-rewrite'
 gem 'unicorn'
