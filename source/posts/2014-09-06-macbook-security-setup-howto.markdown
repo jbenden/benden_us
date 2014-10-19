@@ -92,7 +92,7 @@ to quickly enable the screensaver when walking away from your system.
 To enable the screensaver after one minute of inactivity, run the
 following command from *Terminal*.
 
-    $ defaults write com.apple.screensaver idleTime 1
+    # defaults write com.apple.screensaver idleTime 1
 
 Software
 --------
