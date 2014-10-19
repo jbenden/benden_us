@@ -24,6 +24,7 @@ Please direct any questions, concerns, ideas, or any criticism to joe
 |FreeBSD 10.1 RC2|[http://benden.us/vagrant/freebsd-10.1rc2-amd64.box](http://benden.us/vagrant/freebsd-10.1rc2-amd64.box)|2014/10/15|
 |FreeBSD 11|[http://benden.us/vagrant/freebsd-11.box](http://benden.us/vagrant/freebsd-11.box)|2014/03/09|
 |FreeBSD 11 r273173 amd64|[http://benden.us/vagrant/freebsd-11-r273173-amd64.box](http://benden.us/vagrant/freebsd-11-r273173-amd64.box)|2014/10/17|
+|FreeBSD 11 r273269 amd64|[http://benden.us/vagrant/freebsd-11-r273269-amd64.box](http://benden.us/vagrant/freebsd-11-r273269-amd64.box)|2014/10/19|
 |OS X 10 DP3|[http://benden.us/vagrant/osx10.10dp3.box](http://benden.us/vagrant/osx10.10dp3.box)|2014/06/25|
 |SuSE Linux Enterprise Server 11 SP3|[http://benden.us/vagrant/sles11sp3.box](http://benden.us/vagrant/sles11sp3.box)|2014/09/30|
 
