@@ -94,6 +94,15 @@ following command from *Terminal*.
 
     # defaults write com.apple.screensaver idleTime 1
 
+Password Security
+-----------------
+
+I highly recommend that users utilize a password manager, such as
+[AgileBit's 1Password](https://agilebits.com/onepassword) software. In
+doing so a single password locks away all of your complex generated
+passwords, so you can keep very secure passwords to all of the web
+sites you visit.
+
 Software
 --------
 
