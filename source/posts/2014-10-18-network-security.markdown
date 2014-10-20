@@ -58,7 +58,8 @@ Wi-Fi Enabled Networks
 
 It should go without saying, but *only* use WPA2 encryption for
 wireless networking. Anything else is only a stumbling block for an
-average suspect and they will gain access to the network.
+average suspect and they will gain access to the network with a little
+bit of time and a few tools.
 
 For SMB or Enterprise networks, it is best to utilize 802.1X and
 have a RADIUS server configured to answer requests from known MAC
