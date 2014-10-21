@@ -32,3 +32,12 @@ following command:
 
 Please let me know if you have any suggestions, comments, or ideas to
 [Joseph Benden](mailto:joe@benden.us).
+
+Update #1
+---------
+
+There is an [experimental branch](https://github.com/jbenden/FFmpeg/tree/avcapture-audio) available that allows audio capture in
+addition to screen capture. This works well with Soundflower to capture
+the system audio.
+
+
