@@ -40,4 +40,13 @@ There is an [experimental branch](https://github.com/jbenden/FFmpeg/tree/avcaptu
 addition to screen capture. This works well with Soundflower to capture
 the system audio.
 
+Update #2
+---------
+
+There is another [experimental branch](https://github.com/jbenden/FFmpeg/tree/avfoundation) available that allows full functionality from the
+existing avfoundation device driver. Note that it still experiences the
+same problems that plagued *Update #1* with regards to audio capture. The
+frame rate must be limited to 30 in order for the two be become in sync.
+Additionally, for some unknown reason, this branch when compiled does not
+honor command-line flags. So in testing, I had to hardcode video_screen_index 1 and audio_device_index 2 (My Soundflower 2ch device.).
 
