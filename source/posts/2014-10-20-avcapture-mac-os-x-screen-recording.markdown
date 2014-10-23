@@ -50,3 +50,9 @@ frame rate must be limited to 30 in order for the two be become in sync.
 Additionally, for some unknown reason, this branch when compiled does not
 honor command-line flags. So in testing, I had to hardcode video_screen_index 1 and audio_device_index 2 (My Soundflower 2ch device.).
 
+Update #3
+---------
+
+The author of avfoundation is looking into the merge changes and working
+on the bugs found. This is excellent news!
+
