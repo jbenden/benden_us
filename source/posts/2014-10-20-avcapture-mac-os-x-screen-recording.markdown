@@ -57,4 +57,4 @@ The author of avfoundation is looking into the merge changes and working
 on the bugs found. This is excellent news!
 
 [See here](https://ffmpeg.org/pipermail/ffmpeg-devel/2014-October/164470.html) for the initial patch to make it all happen.
-
+[See Here](https://ffmpeg.org/pipermail/ffmpeg-devel/2014-October/164526.html) for the latest patch that fixes an off-by-one error.
