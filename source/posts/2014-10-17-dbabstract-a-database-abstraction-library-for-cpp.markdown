@@ -16,6 +16,12 @@ the [POCO library](http://pocoproject.org) includes a basic database wrapper imp
 it is not as clean and simple as *dbabstract*. It also suffers some
 missing functionality that *dbabstract* provides.
 
+*Dbabstract* currently supports the following databases:
+
+* MySQL
+* PostgreSQL
+* Sqlite3
+
 Installation
 ------------
 
