@@ -58,3 +58,11 @@ on the bugs found. This is excellent news!
 
 [See here](https://ffmpeg.org/pipermail/ffmpeg-devel/2014-October/164470.html) for the initial patch to make it all happen.
 [See Here](https://ffmpeg.org/pipermail/ffmpeg-devel/2014-October/164526.html) for the latest patch that fixes an off-by-one error.
+
+Update #4
+---------
+
+The patches created from the code I made have been incorporated into the
+lastest FFmpeg source code. So now `avfoundation` may be used to capture
+your screen and audio devices on OS X.
+
