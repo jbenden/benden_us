@@ -1,0 +1,28 @@
+---
+layout: minimal
+title: Archive
+---
+<main id="content" role="main">
+  <div id="top" class="recent-posts home-section">
+    <header class="home-section-header">
+      <span class="ss-icon ss-air ss-clock">Archives</span>
+    </header>
+    <ul class="recent-list">
+        <% @archives.each do |entry| %>
+            <% year = entry[:year] %>
+            <h1><%= year %></h1>
+            <%   entry[:articles].each do |article| %>
+      <li class="recent-list-item recent-<%= article.data.category %>">
+        <div>
+          <h2 class="recent-title"><a href="<%= article.url %>"><%= article.title %></a></h2>
+          <time pubdate datetime="<%= article.date.strftime("%F") %>" class="recent-published"><%= article.data.category %> &middot; <%= article.date.strftime("%B %-d, %Y") %></time>
+        </div>
+        <% if article.data.category == "prose" %><span class="ss-icon ss-air">&#x1F4D3;</span><% end %>
+        <% if article.data.category == "video" %><span class="ss-icon ss-air">&#x1F3AC;</span><% end %>
+    </li>
+<% end %>
+  <% end %>
+    </ul>
+  </div>
+  <%= partial "partials/footer" %>
+</main>

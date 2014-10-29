@@ -15,11 +15,15 @@ activate :blog do |blog|
   blog.layout = 'dummy'  # This intentionally doesn't exist.
   blog.permalink = 'journal/:year/:title.html'
   blog.sources = 'posts/:year-:month-:day-:title.html'
+  blog.paginate = true
 end
 
 # Set Kramdown as our Markdown engine
 set :markdown_engine, :kramdown
-set :markdown, :smartypants => true
+set :markdown, :layout_engine => :erb,
+               :tables => true,
+               :autolink => true,
+               :smartypants => true
 
 ###
 # Compass
@@ -53,6 +57,16 @@ end
 
 page '/feed.xml', :layout => false
 page '/sitemap.xml', :layout => false
+
+ready do
+  archive_resources = []
+  blog.articles.group_by {|a| a.date.year }.each do |year, year_articles|
+      archive_resources << {:year => year, :articles => year_articles}
+  end
+  page '/archive.html', :layout => :minimal do
+      @archives = archive_resources
+  end
+end
 
 ###
 # Helpers

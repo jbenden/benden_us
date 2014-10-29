@@ -33,10 +33,10 @@ title: Welcome
 <main id="content" role="main">
   <div id="top" class="recent-posts home-section">
     <header class="home-section-header">
-      <span class="ss-icon ss-air ss-clock"></span>
+          <span class="ss-icon ss-air ss-clock"></span>
     </header>
     <ul class="recent-list">
-    <% blog.articles.each do |article| %>
+    <% blog.articles[0...15].each do |article| %>
       <li class="recent-list-item recent-<%= article.data.category %>">
         <div>
           <h2 class="recent-title"><a href="<%= article.url %>"><%= article.title %></a></h2>
@@ -46,7 +46,11 @@ title: Welcome
         <% if article.data.category == "video" %><span class="ss-icon ss-air">&#x1F3AC;</span><% end %>
       </li>
     <% end %>
-    </ul>
+</ul>
+<hr />
+<div class="home-section-header">
+<a href="/archive/">View the Archives</a>
+</div>
   </div>
   <%= partial "partials/videohero" %>
   <%= partial "partials/footer" %>
