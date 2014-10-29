@@ -11,6 +11,7 @@ title: Archive
         <% @archives.each do |entry| %>
             <% year = entry[:year] %>
             <h1><%= year %></h1>
+            <hr />
             <%   entry[:articles].each do |article| %>
       <li class="recent-list-item recent-<%= article.data.category %>">
         <div>
