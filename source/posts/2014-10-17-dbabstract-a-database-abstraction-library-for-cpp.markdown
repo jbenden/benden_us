@@ -65,3 +65,8 @@ the project, then simply send a pull request through GitHub. I would
 be happy to accept contributions from the community.
 
 The [source is available here](https://github.com/jbenden/dbabstract).
+
+Cmake Version
+-------------
+A Cmake compatible version is available [here](https://github.com/jbenden/dbabstract/tree/cmake). This will eventually be the supported version of *dbabstract*.
+
