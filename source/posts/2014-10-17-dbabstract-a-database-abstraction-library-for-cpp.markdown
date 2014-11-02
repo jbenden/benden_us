@@ -70,3 +70,5 @@ Cmake Version
 -------------
 A Cmake compatible version is available [here](https://github.com/jbenden/dbabstract/tree/cmake). This will eventually be the supported version of *dbabstract*.
 
+**2014/1/2**: The CMake version is now the officially supported version.
+
