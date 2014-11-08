@@ -62,10 +62,12 @@ on the bugs found. This is excellent news!
 Update #4
 ---------
 
-The patches created from the code I made have been incorporated into the
+The patche-set created from the code I created, have been incorporated into the
 lastest FFmpeg source code. So now `avfoundation` may be used to capture
-your screen and audio devices on OS X. This requires using HEAD branch of
-FFmpeg's source code. Use it like so:
+your screen and audio devices on Mac OS X. This requires using the HEAD branch of
+FFmpeg's source code.
+
+Use it like so:
 
     # ffmpeg -f avfoundation -list_devices true -i ""
 
