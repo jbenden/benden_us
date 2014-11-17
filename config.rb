@@ -111,7 +111,7 @@ configure :build do
   activate :minify_javascript
 
   # Automatic HTML minification
-  activate :minify_html
+  # activate :minify_html
 
   # Gzipping functionality
   activate :gzip
