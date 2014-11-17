@@ -66,7 +66,7 @@ GEM
       middleman-sprockets (>= 3.1.2)
       sass (>= 3.4.0, < 4.0)
       uglifier (~> 2.5)
-    middleman-autoprefixer (2.2.2)
+    middleman-autoprefixer (2.2.4)
       autoprefixer-rails (~> 3.1.0)
       middleman-core (>= 3.3.3)
     middleman-blog (3.5.3)
@@ -165,7 +165,7 @@ DEPENDENCIES
   builder
   dotenv
   middleman (~> 3.3.7)
-  middleman-autoprefixer (~> 2.2.2)
+  middleman-autoprefixer (~> 2.2.4)
   middleman-blog
   middleman-livereload (~> 3.3.4)
   middleman-minify-html
