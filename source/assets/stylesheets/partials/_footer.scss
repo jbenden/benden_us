@@ -95,7 +95,7 @@
 
   a { text-decoration: none; }
   li { text-align: center; }
-  .ss-icon { font-size: 16px; }
+  .ss-icon { font-size: 32px; }
   .service-name { display: none; }
 }
 
@@ -109,3 +109,9 @@ $colors: #3b5998, #171515, #dd4b39, #00acee, #44bbff, #c4302b;
   }
   a.#{nth($service, 1)}:hover { color: nth($service, 2); }
 }
+
+a.git {
+    opacity: 0.2;
+    transition: all 250ms ease;
+  }
+  a.git:hover { opacity: 1.0; }
