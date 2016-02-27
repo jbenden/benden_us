@@ -61,7 +61,7 @@ bytes are the ztd-eth sub-address header, and 210 bytes are
 the payload/TDM data.
 
 <img
-src="http://www.thrallingpenguin.com/articles/TDMoE.png"
+src="/assets/images/TDMoE.png"
 width="781"
 height="177"
 border="0"
